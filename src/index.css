@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-slate-950 text-slate-100 antialiased;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.leaflet-container {
+  background-color: theme('colors.slate.900') !important;
+}
+
+/* Custom Leaflet Dark Mode Filter */
+.leaflet-tile {
+  filter: brightness(0.6) invert(1) contrast(3) hue-rotate(200deg) saturate(0.3) brightness(0.7);
+}
+
+.leaflet-control-zoom {
+  border: none !important;
+  box-shadow: theme('boxShadow.2xl') !important;
+}
+
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out {
+  @apply bg-slate-900/80 backdrop-blur-md text-indigo-400 border border-slate-700;
+  border-style: solid !important;
+}
+
+.leaflet-control-zoom-in:hover,
+.leaflet-control-zoom-out:hover {
+  @apply bg-slate-800 text-white;
+}
