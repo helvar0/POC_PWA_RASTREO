@@ -48,6 +48,7 @@ export default defineConfig({
       }
     })
   ],
+  base: '/POC_PWA_RASTREO/',
   server: {
     allowedHosts: true
   }
